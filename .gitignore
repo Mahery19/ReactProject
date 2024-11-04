@@ -1,0 +1,2 @@
+# Here to ignore the big node_modules for god's sake
+**/node_modules/
