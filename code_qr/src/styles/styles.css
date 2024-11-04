@@ -1,0 +1,127 @@
+/* src/styles/styles.css */
+nav {
+    background-color: #333;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    height: 90px;
+    /* Adjust the height as needed */
+}
+
+/* src/styles/styles.css */
+body.light {
+    --background-color: #c8ffc4;
+    --text-color: #000;
+}
+
+body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    background-color: var(--background-color);
+    padding: 1em;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar li {
+    margin-right: 1em;
+}
+
+/* src/styles/styles.css */
+body.light {
+    --background-color: #c8ffc4;
+    --text-color: #000;
+}
+
+body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    background-color: var(--background-color);
+    padding: 1em;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar li {
+    margin-right: 1em;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}

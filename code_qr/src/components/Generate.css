@@ -1,0 +1,303 @@
+/* src/components/Generate.css */
+
+/* Light Theme Variables */
+:root {
+    --background-color: #c8ffc4;
+    --container-background-color: #f1f8e9;
+    --border-color: #4CAF50;
+    --text-color: #000;
+    --button-background-color: #4CAF50;
+    --button-hover-background-color: #388E3C;
+    --button-text-color: white;
+    --error-color: red;
+    --dialog-background-color: white;
+    --dialog-text-color: #4CAF50;
+}
+
+/* Dark Theme Variables */
+body.dark {
+    --background-color: #121212;
+    --container-background-color: #1E1E1E;
+    --border-color: #BB86FC;
+    --text-color: #ffffff;
+    --button-background-color: #BB86FC;
+    --button-hover-background-color: #3700B3;
+    --button-text-color: white;
+    --error-color: #CF6679;
+    --dialog-background-color: #2C2C2C;
+    --dialog-text-color: #BB86FC;
+}
+
+/* Common Styles */
+.generate-container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.left-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--container-background-color);
+}
+
+.button-box,
+.form-box {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--container-background-color);
+}
+
+.button-box h2 {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-container button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.form-box {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Increased gap between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.phone-number-group {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--container-background-color);
+    color: var(--text-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.short-input {
+    width: 150px;
+    /* Adjusted width */
+}
+
+.short-select {
+    width: 150px;
+    /* Adjusted width */
+}
+
+button[type="button"] {
+    border-radius: 5px;
+    border: none;
+    padding: 2px 2px;
+    cursor: pointer;
+    /* Added margin-top to buttons */
+}
+
+button[type="button"].valid {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+button[type="button"].invalid {
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+}
+
+button[type="button"]:hover.valid {
+    background-color: var(--button-hover-background-color);
+}
+
+.add-button,
+.remove-button {
+    width: 30px;
+    height: 30px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover,
+.remove-button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.qr-code {
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: var(--background-color);
+}
+
+.download-button {
+    margin-top: 20px;
+    /* Added margin-top to download button */
+    padding: 10px 20px;
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-button.valid {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+.download-button.invalid {
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    /* Ensure it displays below the input */
+}
+
+.discard-dialog,
+.customize-dialog,
+.warning-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: var(--dialog-background-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    color: var(--dialog-text-color);
+}
+
+.discard-dialog p,
+.warning-dialog p {
+    margin: 10px 0;
+    color: var(--dialog-text-color);
+}
+
+.discard-dialog button,
+.customize-dialog button,
+.warning-dialog button {
+    margin: 10px 5px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.discard-dialog button:hover,
+.customize-dialog button:hover,
+.warning-dialog button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.customize-dialog {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.customize-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.customize-dialog-buttons,
+.warning-dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.customize-icon,
+.toggle-theme-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+}
+
+.customize-icon:hover,
+.toggle-theme-icon:hover {
+    color: var(--button-hover-background-color);
+}

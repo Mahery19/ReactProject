@@ -1,0 +1,133 @@
+/* Light Theme Variables */
+:root {
+    --background-color: #c8ffc4;
+    --container-background-color: #f1f8e9;
+    --border-color: #4CAF50;
+    --text-color: #000;
+    --button-background-color: #4CAF50;
+    --button-hover-background-color: #388E3C;
+    --button-text-color: white;
+    --error-color: red;
+    --dialog-background-color: white;
+    --dialog-text-color: #4CAF50;
+}
+
+/* Dark Theme Variables */
+body.dark {
+    --background-color: #121212;
+    --container-background-color: #1E1E1E;
+    --border-color: #BB86FC;
+    --text-color: #ffffff;
+    --button-background-color: #BB86FC;
+    --button-hover-background-color: #3700B3;
+    --button-text-color: white;
+    --error-color: #CF6679;
+    --dialog-background-color: #2C2C2C;
+    --dialog-text-color: #BB86FC;
+}
+
+/* Common Styles */
+.scan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.scan-title {
+    margin-bottom: 20px;
+}
+
+.scan-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.scan-content.with-data {
+    justify-content: space-between;
+}
+
+.scan-box,
+.qr-data-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--container-background-color);
+    transition: all 0.5s ease;
+    min-height: 500px;
+    max-height: 500px;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.scan-instruction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.camera-container {
+    border: 2px solid var(--border-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.file-input-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.file-input-label:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.file-input-icon {
+    margin-right: 5px;
+}
+
+.file-input {
+    display: none;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-data-text {
+    margin-top: 10px;
+    text-align: left;
+    white-space: pre-line;
+    /* To ensure text wraps correctly */
+}
+
+.qr-data-text p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.qr-code {
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: var(--background-color);
+}
